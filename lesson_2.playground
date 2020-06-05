@@ -1,0 +1,43 @@
+import UIKit
+import Foundation
+// Первое задание. Написать функцию, которая определяет, четное число или нет. Сделала 2 варианта, где есть и true и false.
+func defineEvenTwo (a: Int) -> Bool {
+if a % 2 == 0 {
+return true
+} else {
+return false
+}
+}
+print(defineEvenTwo (a: 6))
+print(defineEvenTwo (a: 7))
+
+// Второе задание. Написать функцию, которая определяет, делится ли число без остатка на 3. Аналогично несколько вариантов с true и false.
+func defineEvenThree (b: Int) -> Bool {
+if b % 3 == 0 {
+return true
+} else {
+return false
+}
+}
+print (defineEvenThree (b: 17))
+print (defineEvenThree (b: 72))
+
+// Треть задание. Создать возрастающий массив из 100 чисел.
+var newArray = [Int]()
+var i = 1
+while i <= 100 {
+newArray.append(i)
+i+=1
+}
+print(newArray)
+
+// Четвертое задание. Удалить из этого массива все четные числа и все числа, которые не делятся на 3.
+var resultArray = [Int]()
+for val in newArray {
+if !defineEvenTwo(a: val) {
+if !defineEvenThree(b: val) {
+resultArray.append(val)
+}
+}
+}
+print(resultArray)
