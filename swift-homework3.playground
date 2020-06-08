@@ -46,7 +46,7 @@ func engineWork (enginePower: Bool) -> EnginePower {
         return .engineOff
     }
 }
-
+// Инициализация структур и изменение их параметров
 var kia = PassengerCar(manafacture: .kia, yearOfIssue: 1995, bootVolume: 0.5, enginePower: .engineWork, windows: .openWindows, filledBootVolume: 0.1)
 print(kia.enginePower)
 
