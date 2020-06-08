@@ -1,0 +1,56 @@
+import UIKit
+import PlaygroundSupport
+
+// первое задание
+enum Manufacture: String {
+    case lada, kia, mercedes
+}
+
+enum EnginePower {
+    case engineWork, engineOff
+}
+
+enum Windows {
+    case openWindows, closeWindows
+}
+
+enum Cargo {
+    case immerseCargo, unloadCargo
+}
+
+struct Truck {
+    let manafacture: Manufacture
+      let yearOfIssue: Int
+      let bootVolume: Double
+      var engineWork: EnginePower
+      var windows: Windows
+      let filledBootVolume: Double
+}
+
+struct PassengerCar {
+    let manafacture: Manufacture
+    let yearOfIssue: Int
+    let bootVolume: Double
+    var enginePower: EnginePower
+    var windows: Windows
+    let filledBootVolume: Double
+
+}
+
+func engineWork (enginePower: Bool) -> EnginePower {
+    if enginePower == true {
+        print("двигатель включен")
+        return .engineWork
+    } else {
+        print("двигатель выключен")
+        return .engineOff
+    }
+}
+
+var kia = PassengerCar(manafacture: .kia, yearOfIssue: 1995, bootVolume: 0.5, enginePower: .engineWork, windows: .openWindows, filledBootVolume: 0.1)
+print(kia.enginePower)
+
+var randomCar = PassengerCar(manafacture: .mercedes, yearOfIssue: 1990, bootVolume: 0.1, enginePower: engineWork(enginePower: false), windows: .closeWindows, filledBootVolume: 0.1)
+print(randomCar.manafacture)
+randomCar.windows = .openWindows
+print(randomCar.windows)
