@@ -1,0 +1,32 @@
+import UIKit
+import PlaygroundSupport
+
+class Car {
+    var doors: Int = 4
+    var windows : Int = 2
+    var vheel : Int = 4
+    
+    func carIsWorking () {
+   //     if enginePower = true {
+  //          print("car is working work")
+        }
+    }
+
+class trunkCar: Car {
+    var extraVheel: Int = 1
+    var spoilerOnCar: Bool = false
+}
+
+
+class sportCar: Car {
+    var extraVheel: Int = 0
+    var spoilerOnCar: Bool = true
+}
+
+
+enum EnginePower {
+    case engineWork, engineOff, turbo, slow
+}
+
+
+
